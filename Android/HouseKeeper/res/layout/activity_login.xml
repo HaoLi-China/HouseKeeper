@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".LoginActivity"
+    android:background="@drawable/bg"
+    android:gravity="center"
+    android:orientation="vertical" >
+    
+    
+    
+    <LinearLayout 
+        android:id="@+id/loginlayout"
+        android:layout_width="145pt"
+        android:layout_height="120pt"
+        android:orientation="vertical"
+       android:gravity="center"
+       
+       android:background="@drawable/loginbg"
+        >
+
+    <EditText
+        android:id="@+id/userid"
+        android:layout_width="100pt"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5pt"
+        android:hint="@string/useridnotice"
+        android:textSize="7pt"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:background="@drawable/username"
+        android:ems="10" /> 
+
+ 
+    <EditText
+        android:id="@+id/userpw"
+        android:layout_width="100pt"
+        android:layout_height="wrap_content"
+        android:ems="10" 
+        android:textSize="7pt"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="5pt"
+        android:gravity="center"
+        android:hint="@string/userpwnotice"
+        android:background="@drawable/passwd"
+        android:inputType="textPassword" />
+    
+    
+   <LinearLayout 
+        android:layout_width="100pt"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_marginTop="4pt"
+        >
+
+       <CheckBox
+           android:id="@+id/remanberbox"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginRight="20pt"
+           android:textColor="@android:color/white"
+           android:text="@string/remanber" />
+         
+        <Button 
+            android:id="@+id/loginbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:background="@drawable/loginbutton"
+            />
+        
+    </LinearLayout>
+    
+    </LinearLayout>
+    
+    
+    
+    
+    </LinearLayout>
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HouseKeeper</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="loginbutton">Login</string>
+	<string name="cancelbutton">Cancel</string>
+	<string name="useridnotice"> 请输入您的账号</string>
+	<string name="userpwnotice"> 请输入您的密码</string>
+	<string name="remanber">Remanber</string>
+	<string name="mainactivity">MainActivity</string>
+	<string name="ipportsetting">IpPortSetting</string>
+	<string name="setipandport">请设置端口号IP/Port:</string>
+	<string name="cancel">Cancel</string>
+	<string name="submit">Submit</string>
+	<string name="setip">Set IP</string>
+	<string name="setport">Set Port</string>
+	<string name="conwaysetting">ConwaySetting</string>
+	<string name="tabhost">TabHost</string>
+	<string name="voiseorbutton">请选择操作方式:</string>
+	<string name="voiseway">语音控制</string>
+	<string name="buttonway">按钮控制</string>
+	<string name="remoteway">远程控制方式:</string>
+	<string name="socketway">Socket 控制</string>
+	<string name="gprsway">GPRS 控制</string>
+	<string name="changepasswd">ChangePasswd</string>
+	<string name="changepasswdtext">修改账户密码</string>
+	<string name="oldpasswd">输入旧密码</string>
+	<string name="newpasswd">输入新密码</string>
+	<string name="reset">Reset</string>
+	<string name="aboutactivity">AboutActivity</string>
+	<string name="enteractitvity">EnterActitvity</string>
+	<string name="helpactitvity">HelpActitvity</string>
+	<string name="remotectlactivity">RemoteCtlActivity</string>
+	<string name="openBuzzer">打开蜂鸣器</string>
+	<string name="volumeRise">增大音量</string>
+	<string name="volumeDec">减小音量</string>
+	<string name="closeBuzzer">关闭蜂鸣器</string>
+	<string name="location">发送位置信息</string>
+	<string name="control">启动控制</string>
+	
+	<string-array name="user_array">  
+       
+        </string-array>
+	
+	<string name="teamname">山东大学Mouse团队</string>
+	<string name="appname">智能管家</string>
+	<string name="version">HouseKeeperV1.1.0</string>
+	<string name="contrast">联系邮箱:xxx@163.com</string>
+	<string name="abouttitle">关于我们</string>
+	<string name="entertitle">主界面</string>
+	<string name="rtcltitle">控制界面</string>
+	<string name="helptitle">帮助</string>
+	<string name="loginactivity">LoginActivity</string>
+	<string name="logintitle">登录</string>
+	<string name="logintext">客户端登录：</string>
+	<string name="changepwtitle">修改账户密码</string>  
+</resources>

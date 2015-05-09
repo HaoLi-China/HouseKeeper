@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="20pt"
+        android:background="@drawable/top"
+        android:gravity="top"
+        android:orientation="vertical" >
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal"
+		    android:gravity="center"
+            >
+            <TextView
+            android:id="@+id/entertitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10pt"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:text="@string/entertitle" />
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg2"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+        android:layout_width="100pt"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50pt"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/control"
+            android:layout_width="100pt"
+            android:layout_height="wrap_content"
+            android:text="@string/control" />
+
+        <Button
+            android:id="@+id/changepasswd"
+            android:layout_width="100pt"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20pt"
+            android:text="@string/changepasswdtext" />
+        
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

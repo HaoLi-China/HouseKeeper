@@ -1,0 +1,32 @@
+#include "remote.h"
+
+//构造函数
+AddOrDelView::AddOrDelView(QWidget *parent,DataBase *db) :QWidget(parent)
+{
+    setupUi(this);
+  
+    database=db;
+
+    adduser=new AddUser(0,database);
+    deleteuser=new DeleteUser(0,database);
+
+    connect(addUserButton,SIGNAL(clicked()),this,SLOT(slot_toAddUser()));
+    connect(delUserButton, SIGNAL(clicked()), this, SLOT(slot_toDeleteUser()));
+}
+
+//析构函数
+AddOrDelView::~AddOrDelView()
+{
+}
+
+//转向添加用户界面
+void AddOrDelView::slot_toAddUser(){
+    adduser->show();
+}
+
+//转向删除用户界面
+void AddOrDelView::slot_toDeleteUser(){
+    deleteuser->init();
+}
+
+

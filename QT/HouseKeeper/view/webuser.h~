@@ -1,0 +1,19 @@
+#ifndef WEBUSER_H
+#define WEBUSER_H
+
+#include <QWidget>
+#include "ui_webuser.h"
+
+class WebUser : public QWidget, public Ui::WebUser
+{
+    Q_OBJECT
+
+public:
+    explicit WebUser(QWidget *parent = 0);
+    ~WebUser();
+
+private:
+    Ui::WebUser *ui;
+};
+
+#endif // WEBUSER_H

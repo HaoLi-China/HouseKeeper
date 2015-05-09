@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="NewApi">
+        <ignore path="src/com/sdu/housekeeper/ChangePasswd.java" />
+        <ignore path="src/com/sdu/housekeeper/RemoteCtlActivity.java" />
+        <ignore path="src/com/sdu/housekeeper/SocketClient.java" />
+    </issue>
+    <issue id="WrongCall" severity="ignore" />
+</lint>

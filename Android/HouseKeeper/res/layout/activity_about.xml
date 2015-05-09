@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="20pt"
+        android:background="@drawable/top"
+        android:gravity="top"
+        android:orientation="vertical" >
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal"
+		    android:gravity="center"
+            >
+            <TextView
+            android:id="@+id/abouttitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10pt"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:text="@string/abouttitle" />
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:paddingTop="10pt"
+        android:background="@drawable/bg2"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/ourphoto"
+            android:layout_width="150pt"
+            android:layout_height="90pt"
+            android:src="@drawable/ourphoto" />
+
+        
+
+        <TextView
+            android:id="@+id/teamname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10pt"
+            android:textSize="8pt"
+            android:textColor="#cfa972"
+            android:text="@string/teamname" />
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60pt"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" > 
+            
+            <TextView
+            android:id="@+id/appname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5pt"
+            android:textSize="12pt"
+            android:textColor="#8fc31f"
+            android:text="@string/appname" />
+            
+            <TextView
+            android:id="@+id/version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5pt"
+            android:textSize="6pt"
+            android:textColor="#cfa972"
+            android:text="@string/version" />
+            
+            <TextView
+            android:id="@+id/contrast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5pt"
+            android:textSize="8pt"
+            android:textColor="#cfa972"
+            android:text="@string/contrast" />
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

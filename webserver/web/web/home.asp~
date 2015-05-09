@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>login</title>
+<link rel="stylesheet" href="/css/reset.css">
+<style type="text/css">
+	#logbk{
+		background:url(/images2/login.jpg);
+        height:454px;
+        padding-top:50px;
+        }
+	#p1{
+        display:inline;
+        color:#0e0;
+		margin-left:80px;
+        line-height:50px;
+        }
+    #p2{
+    display:inline;
+    color:#0e0;
+    margin-left:20px;
+    }
+    #button{
+    width:60px;
+    height:20px;
+    margin-left:20px;
+    color:#0e0;
+    background:url();
+    }
+    #footer{
+    height:80px;
+    background:url(/images2/login_down.jpg);
+        }
+
+</style>
+<% language=javascript %>
+</head>
+<body>
+	<div id="logbk">
+    	<form  action=/goform/checkUser id="fo" method=POST>
+            <p id="p1">用户名：<input  type=text name=username >
+            </p>
+            <p id="p2">密码：<input type=password name=password >                
+            </p>
+            <input type=submit name=登陆 id="button" value="登陆">
+            
+        </form>
+
+    </div>
+    <div id="footer">
+       
+        </div>
+</body>
+</html>

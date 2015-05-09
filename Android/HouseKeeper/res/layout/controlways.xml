@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:background="@drawable/bg2"
+    >
+    
+    <LinearLayout 
+        android:layout_width="80pt"
+    	android:layout_height="fill_parent"
+    	android:orientation="vertical" 
+    	android:layout_marginTop="10pt"
+        >
+
+    <TextView
+        android:id="@+id/voiseorbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10pt"
+        android:textColor="#8fc31f"
+        android:text="@string/voiseorbutton" />
+
+    <RadioGroup
+        android:id="@+id/voisebuttonradio"
+        android:layout_marginTop="5pt"
+        android:layout_marginLeft="5pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/voiseway"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/voiseway" />
+
+        <RadioButton
+            android:id="@+id/buttonway"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buttonway" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/remoteway"
+        android:layout_marginTop="10pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10pt"
+        android:textColor="#8fc31f"
+        android:text="@string/remoteway" />
+
+    <RadioGroup
+        android:id="@+id/remoteradio"
+        android:layout_marginTop="5pt"
+        android:layout_marginLeft="5pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/socketway"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/socketway" />
+
+        <RadioButton
+            android:id="@+id/gprsway"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gprsway" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/settingsubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10pt"
+        android:layout_gravity="right"
+        android:text="@string/submit" />
+    
+    </LinearLayout>
+
+</LinearLayout>

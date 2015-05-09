@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="20pt"
+        android:background="@drawable/top"
+        android:gravity="top"
+        android:orientation="vertical" >
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal"
+		    android:gravity="center"
+            >
+            <TextView
+            android:id="@+id/helptitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10pt"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:text="@string/helptitle" />
+            
+        </LinearLayout>
+        
+        
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bg2"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

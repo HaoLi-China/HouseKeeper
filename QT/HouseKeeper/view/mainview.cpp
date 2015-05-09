@@ -1,0 +1,229 @@
+#include <QtGui>
+#include "mainview.h"
+
+MainView::MainView(QWidget *parent,DataBase *db,ZigBee *zb,Gprs *grs) : QWidget(parent)
+{
+setAttribute(Qt::WA_DeleteOnClose);
+    setupUi(this);
+
+    background.load("images/main.jpg");
+    monitorIcon.load("images/monitor.png");
+    serviceIcon.load("images/services.png");
+    settingIcon.load("images/setting.png");
+    otherIcon.load("images/others.png");
+    frameBack1.load("images/submain1.png");
+    frameBack2.load("images/submain2.png");
+phoneIcon.load("images/callandmsg.png");
+entIcon.load("images/entertainment.png");
+envIcon.load("images/environment.png");
+locationIcon.load("images/location.png");
+safeIcon.load("images/safe.png");
+accountIcon.load("images/useridsetting.png");
+aboutIcon.load("images/aboutus.png");
+helpIcon.load("images/help.png");
+
+monitorButton->setFlat(true);
+servicesButton->setFlat(true);
+settingButton->setFlat(true);
+otherButton->setFlat(true);
+
+    monitorButton->setIcon(QIcon(monitorIcon));
+    servicesButton->setIcon(QIcon(serviceIcon));
+    settingButton->setIcon(QIcon(settingIcon));
+    otherButton->setIcon(QIcon(otherIcon));
+phoneButton->setIcon(QIcon(phoneIcon));
+entButton->setIcon(QIcon(entIcon));
+envButton->setIcon(QIcon(envIcon));
+locationButton->setIcon(QIcon(locationIcon));
+safeButton->setIcon(QIcon(safeIcon));
+accountButton->setIcon(QIcon(accountIcon));
+aboutButton->setIcon(QIcon(aboutIcon));
+helpButton->setIcon(QIcon(helpIcon));
+
+    monitorButton->setIconSize(QSize(100,80));
+    servicesButton->setIconSize(QSize(100,80));
+    settingButton->setIconSize(QSize(100,80));
+    otherButton->setIconSize(QSize(100,80));
+phoneButton->setIconSize(QSize(90,70));
+entButton->setIconSize(QSize(90,70));
+envButton->setIconSize(QSize(90,70));
+locationButton->setIconSize(QSize(90,70));
+safeButton->setIconSize(QSize(90,70));
+accountButton->setIconSize(QSize(90,70));
+aboutButton->setIconSize(QSize(90,70));
+helpButton->setIconSize(QSize(90,70));
+   
+    QPalette palette1;
+    palette1.setBrush(this->backgroundRole(), QBrush(background));
+    this->setPalette(palette1);
+
+    QPalette palette2;
+    palette2.setBrush(frame->backgroundRole(), QBrush(frameBack1));
+    frame->setPalette(palette2);
+    
+
+    QPalette palette3;
+    palette3.setBrush(frame_3->backgroundRole(), QBrush(frameBack1));
+    frame_3->setPalette(palette3);
+
+    QPalette palette4;
+    palette4.setBrush(frame_4->backgroundRole(), QBrush(frameBack2));
+    frame_4->setPalette(palette4);
+
+    QPalette palette5;
+    palette5.setBrush(frame_5->backgroundRole(), QBrush(frameBack2));
+    frame_5->setPalette(palette5);
+     
+    database=db;
+    zigBee=zb;
+    gprs=grs;
+    safeSettingFlag=false;
+
+    timer = new QTimer(this);   //新建定时器
+    connect(timer,SIGNAL(timeout()),this,SLOT(slot_updateTime()));//关联定时器计满信号和相应的槽函数
+    timer->start(1000);//定时器开始计时，其中1000表示1000ms即1秒
+
+    frame->close();
+    frame_3->close();
+    frame_4->close();
+    frame_5->close();
+
+    //按钮点击事件和相应的槽函数
+    connect(monitorButton,SIGNAL(clicked()),this,SLOT(slot_showMonitor()));
+    connect(servicesButton,SIGNAL(clicked()),this,SLOT(slot_showServices()));
+    connect(settingButton,SIGNAL(clicked()),this,SLOT(slot_showSetting()));
+    connect(otherButton,SIGNAL(clicked()),this,SLOT(slot_showOthers()));
+
+    
+    connect(envButton,SIGNAL(clicked()),this,SLOT(slot_toEnvironment()));
+    connect(aboutButton,SIGNAL(clicked()),this,SLOT(slot_toAbout()));
+    connect(helpButton,SIGNAL(clicked()),this,SLOT(slot_toHelp()));
+    connect(accountButton,SIGNAL(clicked()),this,SLOT(slot_toSetting()));
+    connect(phoneButton,SIGNAL(clicked()),this,SLOT(slot_toPhoneView()));
+    connect(locationButton,SIGNAL(clicked()),this,SLOT(slot_toLocationView()));
+    connect(safeButton,SIGNAL(clicked()),this,SLOT(slot_toSafeSetting()));
+}
+
+//析构函数
+MainView::~MainView()
+{
+  
+}
+
+//显示Monitor
+void MainView::slot_showMonitor(){
+    if(frame->isHidden()){
+        frame->show();
+        frame_3->close();
+        frame_4->close();
+        frame_5->close();
+    }else{
+        frame->hide();
+    }
+}
+
+//显示Services
+void MainView::slot_showServices(){
+    if(frame_3->isHidden()){
+        frame_3->show();
+        frame->close();
+        frame_4->close();
+        frame_5->close();
+    }else{
+        frame_3->hide();
+    }
+
+}
+
+//显示Setting
+void MainView::slot_showSetting(){
+    if(frame_4->isHidden()){
+        frame_4->show();
+        frame->close();
+        frame_3->close();
+        frame_5->close();
+    }else{
+        frame_4->hide();
+    }
+
+}
+
+//显示Others
+void MainView::slot_showOthers(){
+    if(frame_5->isHidden()){
+        frame_5->show();
+        frame->close();
+        frame_3->close();
+        frame_4->close();
+    }else{
+        frame_5->hide();
+    }
+
+}
+
+//转向环境检测界面
+void MainView::slot_toEnvironment()
+{
+    Environment *environment=new Environment(0,database,zigBee);
+    environment->init();
+    connect(this,SIGNAL(signal_timeUpdated()),environment,SLOT(slot_updateTime()));
+}
+
+//转向关于界面
+void MainView::slot_toAbout()
+{
+    About *about=new About();
+    about->init();
+}
+
+//转向帮助界面
+void MainView::slot_toHelp()
+{
+ 
+    Help *help=new Help();
+    help->init();
+}
+
+//转向账户设置界面
+void MainView::slot_toSetting()
+{
+    Setting *setting=new Setting(0,database);
+    setting->init();
+}
+
+//转向电话界面
+void MainView::slot_toPhoneView()
+{
+    PhoneView *phoneView=new PhoneView(0,gprs);
+    phoneView->init();
+}
+
+//转向位置界面
+void MainView::slot_toLocationView()
+{
+    LocationView *locationView=new LocationView(0,database);
+    locationView->init();
+}
+
+//打开安全设置对话框
+void MainView::slot_toSafeSetting()
+{
+    SafeSetting *safeSetting=new SafeSetting(this,safeSettingFlag);
+    connect(safeSetting,SIGNAL(signal_setSafeFlag(bool)),this,SLOT(slot_setSafeFlag(bool)));
+    safeSetting->init();
+}
+
+//设置安全设置开关
+void MainView::slot_setSafeFlag(bool flag){
+     safeSettingFlag=flag;
+     zigBee->setSafeSetting(flag);
+}
+
+//更新时间
+void MainView::slot_updateTime()
+{ 
+    QDateTime time = QDateTime::currentDateTime();//获取系统现在的时间
+    QString strTime = time.toString("yyyy-MM-dd hh:mm:ss");//设置系统时间显示格式
+    timeLcd->display(strTime);//在lcdNumber上显示时间
+    emit(signal_timeUpdated());
+}

@@ -1,0 +1,87 @@
+
+		#main{
+			width:960px;
+           		 height:100%;
+			margin:0px auto;
+			}
+		#head{
+			width:960px;
+			height:203px;
+			margin-bottom:4px;			
+			}
+		#hd1{
+			width:960px;
+			height:165px;
+			margin-bottom:3px;
+			}
+		#hd2{
+			width:960px;
+			height:35px;
+			border-radius:7px;
+			background:url(/images/top.jpg);
+			}
+		#nav{
+		margin-left:40px;
+		
+		}
+		#nav li{
+			margin-top:5px;
+			margin-right:20px;
+			font-size:16px;
+			text-align:center;
+			line-height:25px;
+			float:left;
+			}
+	
+		#nav a:link{
+			color:black;
+		}
+		#nav a:visited{
+			color:black;
+		}
+		#nav a:hover{
+			color:blue;
+		}
+	
+
+		#tmp{
+			width:800px;
+			height:450px;
+			margin-top:0px;
+			float:left;
+			background:url(/images/mid1.png);}
+		#tmp1{
+			width:720px;
+			height:25px;
+			margin-left:40px;
+			margin-top:10px;
+			}
+		#tmp2{
+			width:720px;
+			height:350px;
+			margin-left:40px;
+			margin-top:10px;
+			background:#ffffff;
+			}
+	
+		
+			table,td{
+			border-color:black;
+			}
+			#left{
+			width:80px;
+			height:800px;
+			float:left;
+			background:url(/images/left1.png);}
+			#right{
+			width:80px;
+			height:800px;
+			float:right;
+			background:url(/images/right1.png);}
+
+		select{
+			float:right;margin-right:10px;margin-top:7px;height:20px;
+			}
+
+
+

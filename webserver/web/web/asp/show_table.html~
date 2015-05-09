@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+<title>历史记录</title>
+<link rel="stylesheet" href="/css/reset.css" type="text/css"  />
+<link rel="stylesheet" href="/css/shouye.css" type="text/css" />
+    <!--[if lt IE 9]><script src="/support/excanvas.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="/support/canvas.test.js"></script><![endif]-->
+<style type="text/css">
+#left{
+width:80px;
+height:768px;
+}
+#right{
+width:80px;
+height:768px;
+}
+#tmp{
+height:768px;
+}
+#tmp2{
+height:675px;
+}
+</style>
+  
+</head>
+
+<frameset rows="35%,*" cols="*" framespacing="0" frameborder="no" border="0">
+  <frame src="top.html" name="topFrame" scrolling="No" id="topFrame" title="topFrame" />
+  <frame src="show_table.asp" name="mainFrame" id="mainFrame" title="mainFrame" />
+</frameset>
+<noframes><body>
+</body>
+</noframes></html>
+	
+
+				
+
+

@@ -1,0 +1,31 @@
+#ifndef ADDUSERDIALOG_H
+#define ADDUSERDIALOG_H
+
+#include <QDialog>
+#include "ui_addUserDialog.h"
+#include "digitalKeyboard.h"
+
+class AddUserDialog : public QDialog, public Ui::AddUserDialog
+{
+    Q_OBJECT
+
+public:
+    AddUserDialog(QWidget *parent = 0);
+    ~AddUserDialog();
+
+public:
+QString getPnoneNum();
+
+private:
+QString phoneNum;
+QPixmap background;
+
+//定义槽函数，分别对应消息界面的各个按钮
+private slots:
+void clickTextButton();
+void clickSpace();
+void clickBack();
+void clickClear();
+};
+
+#endif

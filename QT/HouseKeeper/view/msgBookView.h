@@ -1,0 +1,31 @@
+#ifndef MSGBOOKVIEW_H
+#define MSGBOOKVIEW_H
+
+#include <QDialog>
+#include "ui_msgBookView.h"
+#include "userListCL.h"
+#include "messageRecieved.h"
+#include "gprs.h"
+
+class MsgBookView:public QDialog,public Ui::MsgBookView
+{
+Q_OBJECT
+public:
+MsgBookView(QWidget* parent = 0,Gprs *gprs=0);
+~MsgBookView();
+
+public:
+void readList();
+void init();
+
+//定义槽函数，分别对应信息簿界面的各个按钮
+private slots:
+void openMsg();
+void deleteMsg();
+
+private:
+UserListCL *userListCL;
+Gprs *gprs;
+QPixmap background;
+};
+#endif

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.housekeeper"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+    
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.sdu.housekeeper.LoginActivity"
+            android:label="@string/loginactivity" >
+        </activity>
+        
+        <activity
+            android:name="com.sdu.housekeeper.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sdu.housekeeper.TabHost"
+            android:label="@string/tabhost" >
+        </activity>
+        <activity
+            android:name="com.sdu.housekeeper.IpPortSetting"
+            android:label="@string/ipportsetting" >
+        </activity>
+        
+        <activity
+            android:name="com.sdu.housekeeper.ConwaySetting"
+            android:label="@string/conwaysetting" >
+        </activity>
+        
+        <activity
+            android:name="com.sdu.housekeeper.ChangePasswd"
+            android:label="@string/changepasswd" >
+        </activity>
+        <activity
+            android:name="com.sdu.housekeeper.AboutActivity"
+            android:label="@string/aboutactivity" >
+        </activity>
+        <activity
+            android:name="com.sdu.housekeeper.EnterActitvity"
+            android:label="@string/enteractitvity" >
+        </activity>
+        <activity
+            android:name="com.sdu.housekeeper.HelpActivity"
+            android:label="@string/helpactitvity" >
+        </activity>
+         <activity
+            android:name="com.sdu.housekeeper.RemoteCtlActivity"
+            android:label="@string/remotectlactivity" >
+        </activity>
+    </application>
+</manifest>

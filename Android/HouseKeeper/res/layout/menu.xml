@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:orientation="vertical"
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"> 
+
+   
+       <LinearLayout 
+           android:layout_width="fill_parent"
+           android:layout_height="100pt"
+           android:orientation="horizontal"
+           >
+        <ImageView 
+            android:id="@+id/enterimg"
+ 			android:layout_width="wrap_content"
+ 			android:layout_height="100pt"
+ 			android:layout_weight="1"
+ 			android:background="@drawable/enter"
+            /> 
+
+        <ImageView 
+            android:id="@+id/helpimg"
+ 			android:layout_width="wrap_content"
+ 			android:layout_height="100pt"
+ 			android:layout_weight="2"
+ 			android:background="@drawable/help"
+            /> 
+		</LinearLayout>
+
+    
+ 
+    
+      <LinearLayout 
+           android:layout_width="fill_parent"
+           android:layout_height="100pt"
+           >
+        <ImageView  
+            android:id="@+id/aboutimg"
+ 			android:layout_width="wrap_content"
+ 			android:layout_height="100pt"
+ 			android:layout_weight="2"
+ 			android:background="@drawable/about"
+            /> 
+
+        <ImageView 
+            android:id="@+id/settingimg"
+ 			android:layout_width="wrap_content"
+ 			android:layout_height="100pt"
+ 			android:layout_weight="1"
+ 			android:background="@drawable/setting"
+            /> 
+
+		</LinearLayout>
+    
+    
+   
+		<LinearLayout 
+		    android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           >
+        <ImageView  
+            android:id="@+id/familyimg" 
+ 			android:layout_width="wrap_content"
+ 			android:layout_height="wrap_content"
+ 			android:background="@drawable/family"
+            /> 
+            
+		</LinearLayout>
+    
+
+
+
+</LinearLayout> 

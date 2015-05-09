@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg2"
+    android:orientation="vertical"
+    android:gravity="center" >
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="20pt"
+        android:background="@drawable/top"
+        android:gravity="top"
+        android:orientation="vertical" >
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal"
+		    android:gravity="center"
+            >
+            <TextView
+            android:id="@+id/changepwtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10pt"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:text="@string/changepwtitle" />
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="120pt"
+    	android:layout_height="fill_parent"
+    	android:orientation="vertical" 
+    	android:layout_marginTop="10pt"
+        >
+        
+    <TextView
+        android:id="@+id/changepasswdtext"
+        android:textSize="10pt"
+        android:textColor="#8fc31f"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/changepasswdtext" />
+    
+    <EditText  
+       android:id="@+id/useridspinner"  
+       android:layout_width="fill_parent"  
+       android:layout_height="wrap_content"  
+       android:layout_marginTop="10pt"
+       /> 
+
+    <EditText
+        android:id="@+id/oldpasswd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:hint="@string/oldpasswd"
+        android:layout_marginTop="8pt"
+        />
+
+    <EditText
+        android:id="@+id/newpasswd"
+        android:hint="@string/newpasswd"
+        android:layout_marginTop="8pt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal" 
+    	android:layout_marginTop="10pt"
+    	android:gravity="right"
+        >
+    
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset" />
+
+    <Button
+        android:id="@+id/changesubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit" />
+    
+    </LinearLayout>
+    
+    </LinearLayout>
+
+</LinearLayout>

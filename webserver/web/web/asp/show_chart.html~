@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+<title>可视化图形</title>
+<link rel="stylesheet" href="/css/reset.css" type="text/css"  />
+<link rel="stylesheet" href="/css/shouye.css" type="text/css" />
+
+ <link rel="stylesheet" href="/css/demos.css" type="text/css" media="screen" />
+    
+    <script type="text/javascript" src="/libraries/RGraph.common.core.js" ></script>
+    <script type="text/javascript" src="/libraries/RGraph.bar.js" ></script>
+    <script type="text/javascript" src="/libraries/RGraph.line.js" ></script>
+    <!--[if lt IE 9]><script src="/support/excanvas.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="/support/canvas.test.js"></script><![endif]-->
+<style type="text/css">
+#left{
+width:80px;
+height:470px;
+}
+#right{
+width:80px;
+height:470px;
+}
+#main{
+height:100%;
+}
+#tmp2{
+margin-top:30px;
+}
+.button {
+color:#333;
+background:#eee;
+height:30px;
+}
+#b1{
+margin-left:300px;
+}
+#b2{
+margin-left:50px;
+}
+</style>
+
+<script type="text/javascript">
+function date_time(){
+var date = new Date(); 
+this.year = date.getFullYear(); 
+this.month = date.getMonth() + 1; 
+this.date = date.getDate(); 
+this.day = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六")[date.getDay()]; 
+this.hour = date.getHours() < 10 ? "0" + date.getHours() : date.getHours(); 
+this.minute = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes(); 
+this.second = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds(); 
+var currentTime = this.year + "年" + this.month + "月" + this.date + "日 " + this.hour + ":" + this.minute + ":" + this.second + " " + this.day; 
+
+document.getElementById('time').innerHTML=currentTime;
+//document.title="<font-size=>"+currentTime;
+setTimeout('date_time()',500);
+}
+</script>
+
+</head>
+
+<body onload="starttime()">
+	<div id="main">
+    	<div id="head">
+        	<div id="hd1">
+            	<img src="/images2/flag.jpg" id="head1">
+            </div>
+         	<div id="hd2">	
+            	<ul id="nav">
+            		<li><a href="home.asp">首页</a></li>
+             	    <li><a href="show_table.asp">历史记录</a></li>
+              	    <li><a href="">可视化图形</a></li>
+             	    <li><a href="result_show.asp">应用领域</a></li>
+             	    <li><a href="technical_note.asp">技术说明</a></li>
+                    <li><a href="about_us.asp">关于我们</a></li>
+            </ul>
+            </div>
+        </div>
+        <div id="bd">
+            <div id="left"></div>
+        	<div id="tmp">
+                <div id="tmp1">
+                  <div id="time"></div>
+                  <span >
+                  <input class="button" id="b1" type="submit" value="柱形图展示"  onclick="draw1()">
+                  <input class="button" id="b2" type="submit" value="线形图展示"  onclick="draw2()">
+                  </span>
+                </div>
+       
+                <div id="tmp2">  
+		<% aspGetChart("a","a"); %>
+                 <div style="margin-left:200px">
+                     <span><img src="/images2/red.png" style="display:inline;vertical-align:middle">:温度</img></span>
+                     <span><img src="/images2/green.png" style="display:inline;vertical-align:middle">:湿度</img></span>
+                   </div>
+                 </div>  
+            </div>
+            <div id="right"></div>
+  
+        </div>
+  
+ <script> 
+ 
+        window.onload = function ()
+        {
+
+            date_time();
+            
+         }
+    </script>  
+   
+  
+</body>
+</html>
+				
+
+

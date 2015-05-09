@@ -1,0 +1,19 @@
+0----------*rootWeb = T( "web" ) 
+
+1----------*password = T( "123456" ) 
+
+2----------port = 8080  （int） 
+
+3----------retries = 5    (int) 
+
+4----------umRestore( T("websconfig.txt") ) 
+
+5----------T( "/goform" )///goform handler 
+
+6----------T( "/cgi-bin" )///cgi handler 
+
+7----------T( "default.asp" )////default page 
+
+8----------T( "login.asp" )////home page 
+
+9----------hostname///  

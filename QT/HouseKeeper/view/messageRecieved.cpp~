@@ -1,0 +1,56 @@
+#include <QtGui>
+#include "messageRecieved.h"
+
+//构造函数
+MessageRecieved::MessageRecieved(QWidget *parent,Gprs *_gprs,QString strNum,QString strMsgContent):QDialog(parent), gprs(_gprs){
+setAttribute(Qt::WA_DeleteOnClose);
+phoneNum=strNum;
+
+//显示电话号码和信息内容
+setNum(strNum);
+contentShowArea->setText(strMsgContent);
+}
+
+//析构函数
+MessageRecieved::~MessageRecieved(){
+
+}
+
+//初始化
+void MessageRecieved::init(){
+background.load("images/phonebg.jpg");
+
+QPalette palette1;
+    palette1.setBrush(this->backgroundRole(), QBrush(background));
+    this->setPalette(palette1);
+
+userListCL=new UserListCL();
+
+//链接信号和槽
+connect(replyButton, SIGNAL(clicked()), this, SLOT(reply()));
+
+this->show();
+}
+
+//回复消息，转到消息发送界面
+void MessageRecieved::reply(){
+MessageView *messageView=new MessageView(0,gprs);
+messageView->init();
+messageView->setContacts(numShowArea->text());
+messageView->setPhoneNum(phoneNum);
+close();
+}
+
+//显示号码
+void MessageRecieved::setNum(QString num){
+QString str=userListCL->rcIsHas(num);
+if(str.length()==0){
+numShowArea->setText(num);
+}
+else{
+numShowArea->setText(str);
+}
+}
+
+
+

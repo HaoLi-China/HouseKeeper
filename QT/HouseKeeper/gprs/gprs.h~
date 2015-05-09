@@ -1,0 +1,59 @@
+#ifndef GPRS_H
+#define GPRS_H
+
+#include <QObject>
+#include "serialPort.h"
+#include "calledView.h"
+#include "userListCL.h"
+
+class Gprs:public QObject
+{
+Q_OBJECT
+public:
+    Gprs();
+    ~Gprs();
+
+public:
+	void initAT();
+	void ReadMsg(QString strRecv);
+        void sendMsg(QString number,QString msg);
+	void ReadMessage(QString strMsgIndex);
+        QString ProcessMessage(QString strMsg,QString &strNum);
+	QString PreSendMessage( QString strSendMsg, QString strPhoneNumber);
+	QString NumberConversion(QString strNumber);
+	QString ToUnicode(QString str);
+	QString unicodeTo(QString str);
+        int getFd();
+        void doRemoteCtl(QString command);
+        void resetBuff();
+        void setRingFlag(bool flag);
+
+signals:
+        void hangUp();
+        void getMsg(QString str);
+
+private slots:
+	void timeout_slot();
+private:
+	int fd;
+	char buff[256];
+        QTimer *timerRead;
+
+        bool ringFlag;
+        bool serverNumFlag;
+        bool isRemoteCtl;
+	bool isLocationInfo;
+
+	QString serverNumber;
+	QString strEncodeMsg;
+	QString strMsgContent;
+        
+        int TIME;
+        UserListCL *userListCL;
+
+        CalledView *calledView;
+	QString sendContent;
+
+        QString msgIndex;
+};
+#endif

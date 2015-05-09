@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/iplayout" 
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:background="@drawable/bg2"
+	android:gravity="center_horizontal"
+	>
+	
+
+	<LinearLayout
+	    android:layout_width="120pt"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" 
+	    android:layout_marginTop="20pt"
+	    >
+	    <TextView 
+	    android:text="@string/setipandport"
+		android:id="@+id/iptextview" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="10pt"
+		android:textColor="#8fc31f"
+		/>
+
+	    <EditText
+	        android:id="@+id/setipedit"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10pt"
+	        android:hint="@string/setip"
+	        android:ems="10" />
+
+
+	    <EditText
+	        android:id="@+id/setportedit"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10pt"
+	        android:hint="@string/setport"
+	        android:ems="10" />
+	    
+	    <LinearLayout 
+	        android:layout_width="120pt"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal" 
+		    android:gravity="right"
+		    android:layout_marginTop="10pt"
+	        >
+	        
+	        <Button
+	        android:id="@+id/cancelbutton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/cancel" />
+
+	    <Button
+	        android:id="@+id/submitbutton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/submit" />
+	    </LinearLayout>
+
+	    
+	   
+	</LinearLayout>
+	
+</LinearLayout>
+
+

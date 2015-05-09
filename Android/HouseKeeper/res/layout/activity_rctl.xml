@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="20pt"
+        android:background="@drawable/top"
+        android:gravity="top"
+        android:orientation="vertical" >
+        
+         <LinearLayout 
+            android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal"
+		    android:gravity="center"
+            >
+        
+            <TextView
+            android:id="@+id/rtcltitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10pt"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:text="@string/rtcltitle" />
+           </LinearLayout>
+            
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg2"
+        android:orientation="vertical" >
+            
+        <LinearLayout
+        android:layout_width="100pt"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40pt"
+        android:orientation="vertical" >
+        
+        <Button
+            android:id="@+id/openBuzzer"
+            android:layout_width="100pt"
+            android:layout_height="wrap_content"
+            android:text="@string/openBuzzer" />
+
+        <Button
+            android:id="@+id/volumeRise"
+            android:layout_width="100pt"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10pt"
+            android:text="@string/volumeRise" />
+        
+        <Button
+            android:id="@+id/volumeDec"
+            android:layout_width="100pt"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10pt"
+            android:text="@string/volumeDec" />
+        
+        <Button
+            android:id="@+id/closeBuzzer"
+            android:layout_width="100pt"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10pt"
+            android:text="@string/closeBuzzer" />
+         <Button
+            android:id="@+id/location"
+            android:layout_width="100pt"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10pt"
+            android:text="@string/location" />
+        
+         </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

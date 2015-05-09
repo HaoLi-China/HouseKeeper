@@ -1,0 +1,11 @@
+#include "webuser.h"
+
+WebUser::WebUser(QWidget *parent) : QWidget(parent)
+{
+    ui->setupUi(this);
+}
+
+WebUser::~WebUser()
+{
+   
+}

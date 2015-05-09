@@ -1,0 +1,28 @@
+#ifndef REMOTE_H
+#define REMOTE_H
+
+#include <QWidget>
+#include "adduser.h"
+#include "deleteuser.h"
+#include "changepasswd.h"
+#include "ui_remote.h"
+#include "database.h"
+
+class Remote : public QWidget, public Ui::Remote
+{
+    Q_OBJECT
+
+public:
+    explicit Remote(QWidget *parent = 0,DataBase *db=0);
+    ~Remote();
+public slots:
+    void slot_toAddUser();
+    void slot_toDeleteUser();
+
+private:
+    DataBase *database;
+    AddUser *adduser;
+    DeleteUser *deleteuser;
+};
+
+#endif // REMOTE_H
